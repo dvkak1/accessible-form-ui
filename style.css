@@ -1,0 +1,32 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+.form-container {
+    background: var(--form-bg-color);
+    border-radius: 20px;
+    padding: 2rem;
+     max-width: 400px;
+     width: 100%;
+     box-shadow: var(--box-shadow);
+     backdrop-filter:  blur(10px);
+     border: 1px solid var(--form-border-color);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
