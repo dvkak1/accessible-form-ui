@@ -1,3 +1,28 @@
+:root {
+    --background-color: #181818;
+    --form-bg-color: rgba(255,255, 255, 0.1);
+    --form-border-color: rgba(255, 255, 255, 0.1);
+    --input-border-color: rgba(255, 255, 255, 0.2);
+    --text-color: #fff;
+    --placeholder-color: #b0b0b0;
+    --error-color: #ffbb33;
+    --focus-border-color: #ffbb33;
+    --password-btn-color: #ffbb33;
+    --progress-fill-color: linear-gradient(90deg, #ffbb33, #ff8c00);
+    --progress-percentage-color: #ffbb33;
+    --checklist-text-color: #b0b0b0;
+    --checklist-incomplete-color: #fff;
+    --checklist-complete-color: #6b6b6b;
+    --btn-bg-color: rgba(0, 0, 0, 0.6);
+    --btn-hover-bg-color: rgba(255, 136, 0, 0.7);
+    --password-btn-color: #ffbb33;
+    --form-footer-bg: rgba(255, 255, 255, 0.05);
+    --form-footer-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
@@ -26,7 +51,77 @@ body {
 
 label {
     display: block;
+    font-weight: bold;
     margin-bottom: 0.5rem;
     color: var(--text-color);
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid var(--input-border-color);
+  background: var(--input-bg-color);
+  color: var(--text-color);
+}
+
+input::placeholder {
+    color: var(--placeholder-color);
+}
+
+input:focus {
+    border-color: var(--focus-border-color);
+    box-shadow: 0 0 10px var(--input-focus-shadow);
+}
+
+.error-message {
+    color: var(--error-color);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.progress-bar {
+    width:60%; 
+    height: 10px;
+    background-color: var(--progress-bg-color);
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden; 
+}
+
+.progress {
+    background: var(--progress-fill-color);
+    height: 100%;
+    width: 65%;
+    border-radius: 5px;
+}
+
+.progress-percentage {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--progress-percentage-color);
+}
+
+.form-footer {
+  background-color: var(--form-footer-bg);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: var(--form-footer-shadow);
+}
+
+.checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: var(--checklist-text-color);
 }
 
